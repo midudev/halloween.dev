@@ -18,7 +18,7 @@ export function Metas(
       />
       <meta
         property="og:title"
-        content={description}
+        content={name}
       />
       <meta
         property="og:description"
