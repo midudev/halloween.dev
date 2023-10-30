@@ -6,6 +6,7 @@ import { getUserBySession, listGlobalTimelineImage } from "🛠️/db.ts";
 import { Breadcrumbs, Page } from "🧱/Breadcrumbs.tsx";
 
 import { Header } from "🧱/Header.tsx";
+import { Landing } from "🧱/Landing.tsx";
 import { APP_NAME } from "🛠️/const.ts";
 import { Timeline } from "🧱/Gallery.tsx";
 import { Metas } from "🧱/Meta.tsx";
@@ -40,17 +41,21 @@ export default function Home(props: PageProps<Data>) {
     <>
       <Head>
         <title>{APP_NAME}</title>
+
         <Metas
-          name="KV Sketchbook"
-          description="A simple sketchbook app using KV"
+          name="halloween.dev"
+          description="Explica tus historias de terror en programación"
           image="https://hashrock-kv-sketchbook.deno.dev/screenshot.png"
           image_alt="KV Sketchbook"
-          account="@hashedrock"
+          account="@midudev"
         />
       </Head>
-      <Header user={props.data?.user ?? null} />
 
-      <Top {...props.data} />
+      <Landing />
+
+      {/* <Header user={props.data?.user ?? null} /> */}
+
+      {/* <Top {...props.data} /> */}
     </>
   );
 }

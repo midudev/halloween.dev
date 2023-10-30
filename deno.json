@@ -1,11 +1,29 @@
 {
   "tasks": {
-    "start": "deno run -A --unstable --watch=static/,routes/ dev.ts"
+    "start": "deno run -A --unstable --watch=static/,routes/ dev.ts",
+    "build": "deno run -A dev.ts build",
+    "preview": "deno run -A main.ts"
   },
-  "importMap": "./import_map.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
-  "lock": false
+  "lock": false,
+  "imports": {
+    "🛠️/": "./utils/",
+    "🏝️/": "./islands/",
+    "🧱/": "./components/",
+    "$fresh/": "https://deno.land/x/fresh@1.5.2/",
+    "preact": "https://esm.sh/preact@10.18.1",
+    "preact/": "https://esm.sh/preact@10.18.1/",
+    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.2.2",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.1",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.0",
+    "twind": "https://esm.sh/twind@0.16.19",
+    "twind/": "https://esm.sh/twind@0.16.19/",
+    "$std/": "https://deno.land/std@0.175.0/",
+    "kv_oauth": "https://deno.land/x/deno_kv_oauth@v0.1.6-beta/mod.ts"
+  },
+  "lint": { "rules": { "tags": ["fresh", "recommended"] } },
+  "exclude": ["**/_fresh/*"]
 }

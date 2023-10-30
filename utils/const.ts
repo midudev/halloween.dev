@@ -1,1 +1,1 @@
-export const APP_NAME = "KV SketchBook";
+export const APP_NAME = "👻👨‍💻 Halloween Dev ~ por @midudev";
