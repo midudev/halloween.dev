@@ -45,8 +45,8 @@ export default function Home(props: PageProps<Data>) {
         <Metas
           name="halloween.dev"
           description="Explica tus historias de terror en programación"
-          image="https://hashrock-kv-sketchbook.deno.dev/screenshot.png"
-          image_alt="KV Sketchbook"
+          image="https://halloween.dev/og.jpg"
+          image_alt="halloween.dev"
           account="@midudev"
         />
       </Head>
